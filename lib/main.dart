@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './search_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.yellow,
       ),
-      home: MyHomePage(title: 'pulseData'),
+      home: SearchPage(),
     );
   }
 }
@@ -115,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Image.network("https://cdn-images-1.medium.com/max/800/1*MV9o-vHTIKdfuBux5M12Lw.png"),
+                  new Image.network("https://cdn-images-1.medium.com/max/1600/1*44WmnWuvHAzenkzZhFIVOg.png"),
                   new Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
