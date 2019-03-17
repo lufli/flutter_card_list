@@ -23,35 +23,54 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Container( // red circle
-              child: new TextField(
-                decoration: new InputDecoration(border: InputBorder.none, hintText: 'Search...', prefixIcon: Icon(Icons.search)),
-              ),
-              decoration: new BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                border: Border.all(
-                  color: Colors.black,
-                  width: .25,
+        title: new Container(
+          // margin: const EdgeInsets.symmetric(horizontal: 0.0),
+          child: new Container(
+            child: new Row(
+              children: <Widget> [
+                new Container(
+                  // margin: new EdgeInsets.symmetric(horizontal: 0.0),
+                  child: new Icon(Icons.search),
+                  // new IconButton(
+                  //   icon: new Icon(Icons.search),
+                  //   onPressed: (){}),
+                  height: 50,
+                  padding: const EdgeInsets.only(left: 10, right: 10),
                 ),
-              ),
-              padding: const EdgeInsets.all(16.0),
+                new Flexible(
+                  child: new TextField(
+                    // controller: _textController,
+                    // onSubmitted: _handleSubmitted,
+                    decoration: new InputDecoration.collapsed(hintText: 'Search...'),
+                  )
+                )
+              ],
             ),
+            decoration: new BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.rectangle,
+              border: Border.all(
+                color: Colors.black,
+                width: .25,
+              ),
+            ),
+          )
+        )
       ),
       body: new Container( // red circle
-              child: new TextField(
-                decoration: new InputDecoration.collapsed(hintText: 'Search...'),
-              ),
-              decoration: new BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                border: Border.all(
-                  color: Colors.black,
-                  width: .25,
-                ),
-              ),
-              padding: const EdgeInsets.all(16.0),
-            ),
-          );
+        child: new TextField(
+          decoration: new InputDecoration.collapsed(hintText: 'Search...'),
+        ),
+        decoration: new BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.rectangle,
+          border: Border.all(
+            color: Colors.black,
+            width: .25,
+          ),
+        ),
+        padding: const EdgeInsets.all(16.0),
+      ),
+    );
   }
 }
